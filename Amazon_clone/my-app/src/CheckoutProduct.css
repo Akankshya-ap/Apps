@@ -1,0 +1,33 @@
+.checkoutproduct{
+    display: flex;
+    flex-direction: column;
+}
+.checkoutproduct>img{
+    width: 180px;
+    height: 180px;
+    object-fit: contain;
+    padding-left: 20px;
+}
+
+.checkoutP_info{
+    padding-left: 20px;
+
+}
+.checkoutP_info>button{
+    
+    background-color: #f0c14b;
+    border: 1px solid;
+    border-color: #f0c14b  #f0c14b #f0c14b;
+}
+.checkoutP_title{
+font-size: 17px;
+font-weight: 800;
+}
+
+.checkoutP_price{
+
+}
+.checkoutP_rating{
+    display: flex;
+    flex-direction: row;
+}
