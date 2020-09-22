@@ -18,7 +18,8 @@ function reducer(state, action){
             return {
                 ...state,
                 user:action.user,
-            }
+            };
+            break;
         case 'ADD_TO_BASKET':
             return {
                 ...state,
