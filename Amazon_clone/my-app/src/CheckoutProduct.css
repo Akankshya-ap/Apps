@@ -1,6 +1,8 @@
 .checkoutproduct{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    width: 1350px;
+    margin-top: 30px;
 }
 .checkoutproduct>img{
     width: 180px;
@@ -10,14 +12,17 @@
 }
 
 .checkoutP_info{
+    display: flex;
+    flex-direction: column;
     padding-left: 20px;
 
 }
 .checkoutP_info>button{
-    
+    margin-top: 10px;
     background-color: #f0c14b;
     border: 1px solid;
     border-color: #f0c14b  #f0c14b #f0c14b;
+    margin-bottom: 15px;
 }
 .checkoutP_title{
 font-size: 17px;
@@ -25,7 +30,6 @@ font-weight: 800;
 }
 
 .checkoutP_price{
-
 }
 .checkoutP_rating{
     display: flex;
