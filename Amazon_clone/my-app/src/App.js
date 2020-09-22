@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 // import logo from './logo.svg';
 import './App.css';
 import {BrowserRouter as Router, Switch, Route, Link} from "react-router-dom"
@@ -6,8 +6,35 @@ import Header from './Header';
 import Home from './Home';
 import Checkout from './Checkout';
 import Login from './Login';
+import { useStateValue } from './StateProvider';
+import {auth} from "./firebase";
 
 function App() {
+
+  const [{basket}, dispatch] = useStateValue();
+  // useeffect <<<<< powerful
+
+  useEffect(() => { const unsubscribe =
+    auth.onAuthStateChanged((authuser)=>{
+      if (authuser){
+        dispatch({
+          type: "SET_USER",
+          user:authuser
+        })
+      }
+      else{
+        dispatch({
+          type: "SET_USER",
+          user:null
+        });
+        return ()=>{
+          unsubscribe
+        }
+      }
+    })
+  }, [])
+
+
   return (
     <Router>
     <div className="app">
